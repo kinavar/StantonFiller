@@ -9,10 +9,12 @@ html, body {
   overflow: hidden;
   margin: 0;
   font-size: 10px;
-  font-family: Roboto, sans-serif; }
+  font-family: Roboto, sans-serif;
+  background-image: url("http://www.wmrc.edu/images/white-mtn-after-storm.jpg");
+  background-size: cover; }
 
 .wrapper {
-  background: #00ACC1;
+  background: rgba(0, 172, 193, 0.8);
   height: 100%;
   position: relative; }
   .wrapper h1 {
@@ -32,7 +34,35 @@ html, body {
     -webkit-animation: focus 3.5s ease-in;
     -moz-animation: focus 3.5s ease-in;
     animation: focus 3.5s ease-in; }
+  .wrapper h2 {
+    position: absolute;
+    font: 400 3rem/1 Roboto, sans-serif;
+    color: white;
+    text-align: center;
+    top: 58%;
+    left: 50%;
+    width: 70%;
+    margin: 0 0 0 -35%;
+    opacity: 0;
+    -webkit-animation: fadein 1s 3.5s ease-out forwards;
+    -moz-animation: fadein 1s 3.5s ease-out forwards;
+    animation: fadein 1s 3.5s ease-out forwards; }
 
+@-webkit-keyframes fadein {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes fadein {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
 @-webkit-keyframes focus {
   0% {
     -webkit-filter: blur(4px); }
@@ -94,5 +124,10 @@ html, body {
 @media screen and (max-width: 600px) {
   html, body {
     font-size: 6px; } }
+@media screen and (max-width: 725px) {
+  html, body {
+    font-size: 6px; }
+    html .wrapper h2, body .wrapper h2 {
+      top: 65%; } }
 
 /*# sourceMappingURL=style.css.map */
